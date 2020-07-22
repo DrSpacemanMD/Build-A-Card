@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="CardGen.css">
+<script src="MakeCard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</head>
+	
+	<center><h1>Build-A-Card</h1></center>
+	<center><h3>Simple tool to quickly build proxy cards for awesome games.</h3></center>
+	
+<body style="background-color:orange;">
+	
+
+	<center>
+
+	<div id="container">
+	    <div id="Instructions">
+			<ol>
+			  <li>Enter card title</li>
+			  <li>Enter card description</li>
+			  <li>Build the card to add it to the card book</li>
+			  <li>download the card book to get a pdf of cards to cut out</li>
+			</ol>
+	    </div>
+
+		<div id="rcorners1">
+			<div id ="UpperText">
+			<textarea id="TitleForm" name="message" rows="3" cols="25" placeholder="Card Title"></textarea> 
+			</div>
+			<div id ="LowerText">
+			<textarea id="DescriptionForm" name="message" rows="3" cols="25" placeholder="Card Description"></textarea>
+			</div>
+		</div>
+
+    </div>
+
+	<input type="button" name="button" id="button" value="Build Card" onclick="MakeNewCard()">
+
+
+	<p>Card Book</p>
+	<p id="PageNumber">Page 1/1<p>
+	<div id="CardBook" >
+		<div class="row">
+			<div class="column">
+				<img src="cattest.jpg" style="width:200px;height:280px" id="Card1">
+			</div>
+			<div class="column">
+				<img src="cattest.jpg" style="width:200px;height:280px;" id="Card2">
+			</div>
+			<div class="column">
+				<img src="cattest.jpg" style="width:200px;height:280px;" id="Card3">
+			</div>
+		</div>
+	</div>
+
+
+		<input type="button" name="NextPage" id="Next" value="<<" onclick="PrevPage()">
+		<input type="button" name="PrevPage" id="Prev" value=">>" onclick="NextPage()">
+		<br>
+		<input type="button" name="SaveCards" id="SaveCards" value="Download Card Book" onclick="MakePDF()">
+	</center>
+
+
+</body>
+	
+</html>

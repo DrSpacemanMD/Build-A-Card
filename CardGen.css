@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+#rcorners1 {
+	border-radius: 25px;
+	background: #FFFFFF;
+	padding: 20px;
+	width: 200px;
+	height: 280px;
+	margin:0 auto
+}
+
+#Instructions{
+	float:right;
+	width:250px;
+    padding-right: 0px;
+    text-align: left;
+    font-size: 12px;
+}
+
+#container{width:100%;}
+
+#UpperText {
+	position: relative;
+	border: 2px solid #02FF00;
+	width: 100%;
+	height:15%;
+	top: 0%;
+}
+
+#LowerText {
+	position: relative;
+	border: 2px solid #D40003;
+	width: 100%;
+	height: 50%;
+	bottom: -37%;
+}
+
+#TitleForm
+{
+	position: relative;
+	width: 97%;
+	height: 85%;
+	top: 0%;
+	text-align: center;
+	border:none;
+	resize: none;
+	overflow:hidden;
+}
+
+#DescriptionForm
+{
+	position: relative;
+	width: 97%;
+	height: 95%;
+	top: 0%;
+	text-align: center;
+	border:none;
+	resize: none;
+	overflow:hidden;
+}
+
+#TitleForm:focus {
+  outline: 0px;
+}
+#DescriptionForm:focus {
+  outline: 0px;
+}
+
+#CardBook{
+	background: #FF5053;
+	border-radius: 25px;
+	width: 100%;
+	height: 300px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0px;
+  position: relative;
+    top: 10px;
+    margin: auto;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
