@@ -1,10 +1,27 @@
 BuiltCards = [];
 PageNumber = 1;
 DebugCardCount =0;
+CardType=""
+
 var padding = 40;
 
 
 function MakeNewCard() {
+  
+  const Standard = document.getElementById('Standard');
+  const Small = document.getElementById('Small');
+  if (CardType == "")
+  {
+      if (Standard.checked){CardType="Standard";}
+      if (Small.checked){CardType="Small";}
+  }
+  
+  if (Standard.checked && CardType=="Small"){ alert("You can't mix card types"); return; }
+  if (Small.checked && CardType=="Standard"){ alert("You can't mix card types"); return; }
+
+
+
+
   var CardTitle = document.getElementById("TitleForm").value;
   var CardDesc = document.getElementById("DescriptionForm").value;
 
@@ -22,8 +39,6 @@ function MakeNewCard() {
   ctx.lineWidth = 20;
   ctx.strokeStyle = "black";
   ctx.stroke();
-
-  
 
   ctx.rect(padding, padding, c.width-padding*2,c.height*0.25);
   ctx.lineWidth = 4;
@@ -76,7 +91,7 @@ function UpdateCardBook()
     }
 
     for (i = 0; i <3; i++) {
-      Cards[i].src = "cattest.jpg";
+      Cards[i].src = "PlaceHolder.png";
     }
 
 
@@ -90,6 +105,7 @@ function UpdateCardBook()
 
 function NextPage()
 {
+  if (BuiltCards.length <=3){return;}
   PageNumber++;
   MaxPage = Math.ceil(BuiltCards.length/3.0)
   if (PageNumber>MaxPage){PageNumber=MaxPage;}
@@ -98,6 +114,7 @@ function NextPage()
 
 function PrevPage()
 {
+  if (BuiltCards.length <=3){return;}
   PageNumber--;
   if (PageNumber<1){PageNumber=1;}
   UpdateCardBook();
@@ -147,8 +164,16 @@ function FormatTextCorrectly(InputString,ypos, ctx,c){
 function MakePDF(){
   if (BuiltCards.length==0){alert("Add cards to the card book first!");return;}
   
-  var CardWidth  = 63;
-  var CardHeight = 88;
+  var CardWidth  = 61; //63;
+  var CardHeight = 86; //88;
+
+  const Standard = document.getElementById('Standard');
+  const Small = document.getElementById('Small');
+  if (CardType == "Standard"){CardWidth=61; CardHeight=86;}
+  if (CardType == "Small"){CardWidth=41; CardHeight=63;}
+
+
+
 
   var doc = new jsPDF("p", "mm", "a4"); //210mm x 297mm
   var maxImagesHor = Math.floor(210/CardWidth);
