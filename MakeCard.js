@@ -173,13 +173,17 @@ function MakePDF(){
   if (CardType == "Small"){CardWidth=41; CardHeight=63;}
 
 
-
+  var PaddingX = 10;
+  var PaddingY = 10;
 
   var doc = new jsPDF("p", "mm", "a4"); //210mm x 297mm
-  var maxImagesHor = Math.floor(210/CardWidth);
-  var maxImagesVert = Math.floor(297/CardHeight);
-  var x =0;
-  var y =0;
+  var maxImagesHor = Math.floor( (210-PaddingX)/CardWidth);
+  var maxImagesVert = Math.floor( (265)/CardHeight);
+
+
+
+  var x =PaddingX;
+  var y =PaddingY;
   
   var HorCounter=0;
   var VertCounter=0;
@@ -189,10 +193,10 @@ function MakePDF(){
     doc.addImage(BuiltCards[i].toDataURL(), x, y, CardWidth, CardHeight);
     x+=CardWidth;
     HorCounter++;
-    if (HorCounter>=maxImagesHor){ x=0;y+=CardHeight;VertCounter++;HorCounter=0}
-    if (VertCounter>=maxImagesVert)
-    {x=0;
-    y=0;
+    if (HorCounter>=maxImagesHor){ x=PaddingX;y+=CardHeight;VertCounter++;HorCounter=0}
+    if (VertCounter>=maxImagesVert && i != BuiltCards.length-1)
+    {x=PaddingX;
+    y=PaddingY;
     HorCounter=0;
     VertCounter=0;
     doc.addPage();
@@ -203,8 +207,8 @@ function MakePDF(){
 
   for (var i =1; i <= doc.internal.getNumberOfPages(); i++){
     doc.setPage(i);
-    doc.text("cards generated using Build-A-Card" , doc.internal.pageSize.getWidth()/2, 295, { align: "center" })
-    doc.text('page ' + i + "/" +  doc.internal.getNumberOfPages()  , doc.internal.pageSize.getWidth()/2, 285, { align: "center" })
+    doc.text("cards generated using Build-A-Card" , doc.internal.pageSize.getWidth()/2, 280, { align: "center" })
+    doc.text('page ' + i + "/" +  doc.internal.getNumberOfPages()  , doc.internal.pageSize.getWidth()/2, 273, { align: "center" })
   }
 
   
