@@ -8,8 +8,8 @@ function MakeNewCard() {
   var CardTitle = document.getElementById("TitleForm").value;
   var CardDesc = document.getElementById("DescriptionForm").value;
 
-  if (CardTitle==""){ alert("Missing Card title :("); return; }
-  if (CardDesc==""){ alert("Missing Card Description :("); return;}
+  if (CardTitle==""){ alert("Missing Card title"); return; }
+  if (CardDesc==""){ alert("Missing Card Description"); return;}
 
   var c = document.createElement('canvas');
   var ctx = c.getContext("2d");
@@ -41,14 +41,14 @@ function MakeNewCard() {
 
 
   var finalY  = FormatTextCorrectly(CardTitle,128,ctx,c)
-  if (finalY>(c.height*0.3 - padding)){alert("Card Title is to beeeeg"); return;} 
+  if (finalY>(c.height*0.3 - padding)){alert("Card Title is to long"); return;} 
 
   ctx.font = "40px Georgia";
   ctx.fillStyle = "black";
   ctx.textAlign = "center";
 
   var finalY2 = FormatTextCorrectly(CardDesc,c.height*0.5+48,ctx,c)
-  if (finalY2>(c.height*0.5+ c.height*0.5-padding*2)){alert("Card Description is to thic"); return;} 
+  if (finalY2>(c.height*0.5+ c.height*0.5-padding*2)){alert("Card Description is to long"); return;} 
  
   var dataURL = c.toDataURL();
   BuiltCards.push(c);

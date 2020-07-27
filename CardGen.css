@@ -7,15 +7,27 @@
 	padding: 20px;
 	width: 200px;
 	height: 280px;
-	margin:0 auto
+	margin:0 auto;
+	border: 2px solid #000000;
 }
 
 #Instructions{
+	position: absolute;
 	float:right;
-	width:250px;
+	width:30%;
+	top: 220px;
     padding-right: 0px;
     text-align: left;
-    font-size: 12px;
+    font-size: 24px;
+
+
+    font-family: helvetica; color: white;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 0.8px;
+	-webkit-text-stroke-color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 #container{width:100%;}
@@ -72,6 +84,7 @@
 	border-radius: 25px;
 	width: 100%;
 	height: 300px;
+	border: 2px solid #000000;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -91,3 +104,104 @@
   display: table;
 }
 
+.footer {
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+	font-family: helvetica; color: white;
+	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 0.4px;
+	-webkit-text-stroke-color: black;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+
+}
+
+#Background {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+ #FontTitle {
+    font-family: helvetica; color: white;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+ }
+ 
+
+#PageNumber {
+    font-family: helvetica; color: white;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 0.4px;
+	-webkit-text-stroke-color: black;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+ }
+ 
+ #button {
+    font-family: helvetica; color: black;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 00px;
+	-webkit-text-stroke-color: black;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+    background-color: #d400038c;
+    border: 1px solid black;
+ }
+
+  #SaveCards {
+    font-family: helvetica; color: black;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 00px;
+	-webkit-text-stroke-color: black;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+    background-color: #d400034d;
+    border: 1px solid black;
+ }
+
+ #Next
+{
+    font-family: helvetica; color: black;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 00px;
+	-webkit-text-stroke-color: black;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+    background-color: #d400034d;
+    border: 1px solid black;
+}
+
+ #Prev
+{
+	font-family: helvetica; color: black;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 00px;
+	-webkit-text-stroke-color: black;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+    background-color: #d400034d;
+    border: 1px solid black;
+}

@@ -5,15 +5,14 @@
 <script src="MakeCard.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 </head>
-	
-	<center><h1>Build-A-Card</h1></center>
-	<center><h3>Simple tool to quickly build proxy cards for awesome games.</h3></center>
-	
-<body style="background-color:orange;">
-	
 
+	<div id="FontTitle">
+		<center><h1>Build-A-Card</h1></center>
+		<center><h3>Simple tool to quickly build proxy cards for awesome games.</h3></center>
+	</dib>
+	
+<body id = "Background">
 	<center>
-
 	<div id="container">
 	    <div id="Instructions">
 			<ol>
@@ -38,8 +37,8 @@
 	<input type="button" name="button" id="button" value="Build Card" onclick="MakeNewCard()">
 
 
-	<p>Card Book</p>
-	<p id="PageNumber">Page 1/1<p>
+	<p id = "PageNumber" >Card Book</p>
+	<p id = "PageNumber">Page 1/1<p>
 	<div id="CardBook" >
 		<div class="row">
 			<div class="column">
@@ -53,15 +52,18 @@
 			</div>
 		</div>
 	</div>
-
-
 		<input type="button" name="NextPage" id="Next" value="<<" onclick="PrevPage()">
 		<input type="button" name="PrevPage" id="Prev" value=">>" onclick="NextPage()">
 		<br>
 		<input type="button" name="SaveCards" id="SaveCards" value="Download Card Book" onclick="MakePDF()">
 	</center>
 
-
 </body>
 	
+<div class="footer">
+  <p>Please report any bugs to the projects <a href="https://github.com/DrSpacemanMD/Build-A-Card">Github</a> </p>
+</div>
+
+
+
 </html>
