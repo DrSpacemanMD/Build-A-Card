@@ -13,17 +13,17 @@
 
 #Instructions{
 	position: absolute;
-	float:right;
+	float:left;
 	width:30%;
 	top: 220px;
-    padding-right: 0px;
+    padding-left: 0px;
     text-align: left;
     font-size: 24px;
-
+    left: 10px;
 
     font-family: helvetica; color: white;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 0.8px;
+	-webkit-text-stroke-width: 1.0px;
 	-webkit-text-stroke-color: black;
 
     -webkit-font-smoothing: antialiased;
@@ -38,6 +38,7 @@
 	width: 100%;
 	height:15%;
 	top: 0%;
+	border-radius: 10px;
 }
 
 #LowerText {
@@ -46,12 +47,13 @@
 	width: 100%;
 	height: 50%;
 	bottom: -37%;
+	border-radius: 10px;
 }
 
 #TitleForm
 {
 	position: relative;
-	width: 97%;
+	width: 93%;
 	height: 85%;
 	top: 0%;
 	text-align: center;
@@ -63,7 +65,7 @@
 #DescriptionForm
 {
 	position: relative;
-	width: 97%;
+	width: 93%;
 	height: 95%;
 	top: 0%;
 	text-align: center;
@@ -93,8 +95,8 @@
   width: 33.33%;
   padding: 0px;
   position: relative;
-    top: 10px;
-    margin: auto;
+  top: 10px;
+  margin: auto;
 }
 
 /* Clear floats after image containers */
@@ -111,14 +113,13 @@
   width: 100%;
   color: white;
   text-align: center;
-
-	font-family: helvetica; color: white;
-	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 0.4px;
-	-webkit-text-stroke-color: black;
-	font-size: 15px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
+  font-family: helvetica; color: white;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: black;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 
 }
 
@@ -145,9 +146,9 @@
 #PageNumber {
     font-family: helvetica; color: white;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 0.4px;
-	-webkit-text-stroke-color: black;
-	font-size: 20px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-strke-color: black;
+	font-size: 25px;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
  }
@@ -174,7 +175,7 @@
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 20px;
-    background-color: #d400034d;
+    background-color: #d400038c;
     border: 1px solid black;
  }
 
@@ -188,7 +189,7 @@
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 20px;
-    background-color: #d400034d;
+    background-color: #d400038c;
     border: 1px solid black;
 }
 
@@ -202,6 +203,6 @@
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 20px;
-    background-color: #d400034d;
+    background-color: #d400038c;
     border: 1px solid black;
 }
