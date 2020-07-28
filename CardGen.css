@@ -5,7 +5,7 @@
 	border-radius: 25px;
 	background: #FFFFFF;
 	padding: 20px;
-	width: 200px;
+	width: 201px;
 	height: 280px;
 	margin:0 auto;
 	border: 2px solid #000000;
@@ -58,6 +58,7 @@
 	height:15%;
 	top: 0%;
 	border-radius: 10px;
+	left: -2px
 }
 
 #LowerText {
@@ -67,6 +68,7 @@
 	height: 50%;
 	bottom: -37%;
 	border-radius: 10px;
+	left: -2px
 }
 
 #TitleForm
@@ -145,7 +147,7 @@
 #Background {
   border: 2px solid black;
   padding: 25px;
-  background: url(Background.jpg);
+  background: url(Background5.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
